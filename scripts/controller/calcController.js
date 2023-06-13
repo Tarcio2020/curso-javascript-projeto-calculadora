@@ -66,7 +66,13 @@ addEventListenerAll(element, events, fn) {
 }
 
 
+execBtn(value) {
 
+    switch (value){
+        
+    }
+
+}
 
 
 // querySelector vai fazer uma busca no doc limitada || querySelectorAll vai fazer uma busca geral permitindo que seja feita com mais paramentros.
@@ -79,7 +85,9 @@ addEventListenerAll(element, events, fn) {
 // addEventListener = evento nativo do JS||aceita apenas um evento por vez.
             this.addEventListenerAll(btn, "click drag", e=> {
 
-                console.log(btn.className.baseVal.replace("btn-",""));
+                let textBtn = btn.className.baseVal.replace("btn-","");
+                this.execBtn(textBtn);
+            
 
             });
 
