@@ -18,7 +18,7 @@ ________________________________________________________________________________
 class calcController {
     
     constructor() {
-        this._operation = []
+        this._operation = [];
         this._locale = 'pt-BR';
         this._displayCalcEl = document.querySelector("#display");
         this._dateE1 = document.querySelector("#data");
@@ -77,6 +77,7 @@ clearEntry(){
 
 addOperator(value) {
     this._operation.push(value);
+    console.log(this._operation);
 }
 
 setError() {
@@ -94,31 +95,40 @@ execBtn(value) {
             this.clearEntry();
             break;
         case 'soma':
-            this. 
+            
             break;
         case 'subtracao':
-            this. 
+            
             break;
         case 'divisao':
-            this. 
+            
             break;
         case 'multiplicacao':
-            this. 
+            
             break;
         case 'porcento':
-            this. 
+            
             break;
         case 'igual':
-            this. 
+            
             break;
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                this.addOperation(parseInt(value));
+                break;
+      
+      
         default:
             this.setError();
             break;
-
-    
-    
-
-
 
     }
 
@@ -136,7 +146,10 @@ execBtn(value) {
             this.addEventListenerAll(btn, "click drag", e=> {
 
                 let textBtn = btn.className.baseVal.replace("btn-","");
+             
+                
                 this.execBtn(textBtn);
+
             
 
             });
